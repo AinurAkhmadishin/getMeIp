@@ -1,6 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {getIP} from "../../api/api";
 
-interface CounterState {
+interface ICounterState {
     ip: string;
     city: string;
     region: string;
@@ -9,7 +10,7 @@ interface CounterState {
     error: string;
 }
 
-const initialState: CounterState = {
+const initialState: ICounterState = {
     ip: '',
     city: '',
     region: '',
@@ -21,23 +22,27 @@ const initialState: CounterState = {
 export const counterSlice = createSlice({
     name: 'counter',
     initialState,
-    reducers: {
-        getMyIP: (state, action) => {
+    reducers: {}
+    ,extraReducers:{
+        [getIP.fulfilled.type]:(state, action:PayloadAction<ICounterState>) => {
             const { ip, city, timezone, region } = action.payload;
             state.ip = ip;
             state.city = city;
             state.timezone = timezone;
             state.region = region;
+            state.loading = false
         },
-        loading: (state, action) => {
-            state.loading = action.payload;
-        },
-        error: (state, action) => {
+        [getIP.pending.type]:(state) => {
+    state.loading = true},
+        [getIP.rejected.type]:(state, action:PayloadAction<string>) => {
+            state.loading = false
             state.error = action.payload;
-        },
-    },
+        }
+
+    }
 });
 
-export const { getMyIP, loading, error } = counterSlice.actions;
+
+//export const { getMyIP, loading, error } = counterSlice.actions;
 
 export default counterSlice.reducer;

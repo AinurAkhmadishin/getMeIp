@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, {FC, useEffect} from 'react';
 import { getIP } from '../../api/api';
 import { useAppDispatch, useAppSelector } from '../../app/store';
 import { Spinner } from '../../UI/Spinner/Spinner';
 import { Article } from '../../components/article/Article';
 
-export const MyIp = () => {
+export const MyIp:FC = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(getIP());
