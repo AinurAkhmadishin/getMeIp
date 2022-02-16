@@ -1,0 +1,16 @@
+.nav{
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  &__link{
+    color:#254E58;
+    font-weight: bold;
+    margin-left: 0.5em;
+    font-family:"Arial";
+  }
+}
+
+.active{
+  color: #4F4A41;
+  text-decoration:underline;
+}

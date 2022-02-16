@@ -1,0 +1,30 @@
+@import 'materialize-css/dist/css/materialize.min.css';
+
+@font-face {
+  font-family: "KaiseiDecol-Regular";
+  src: url("../assets/fonts/KaiseiDecol-Regular.woff") format("woff"),
+  url("../assets/fonts/KaiseiDecol-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OrelegaOne-Regular";
+  src: url("../assets/fonts/OrelegaOne-Regular.woff") format("woff"),
+  url("../assets/fonts/OrelegaOne-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+html,
+body{
+  background-color: #88BDBC ;
+  font-family: "KaiseiDecol-Bold","OrelegaOne-Regular", "Arial", "sans-serif";
+}
+
+.app{
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
