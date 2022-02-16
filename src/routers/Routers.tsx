@@ -11,6 +11,14 @@ export const Routers = () => {
       <Routes>
         <Route path="/myIp" element={<MyIp />} />
         <Route path="/" element={<AlienIp />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: '1rem' }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
       </Routes>
     </>
   );
