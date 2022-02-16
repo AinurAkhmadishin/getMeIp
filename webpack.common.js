@@ -4,18 +4,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  mode: 'development',
-  entry: ['@babel/polyfill', './src/index.tsx'],
+  entry: {
+    app: ['@babel/polyfill', './src/index.tsx'],
+  },
   output: {
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
+    clean: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devServer: {
     open: true,
-    port: 8080,
+    port: 4000,
   },
   module: {
     rules: [
