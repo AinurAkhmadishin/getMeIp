@@ -7,7 +7,6 @@
     "build": "webpack --config webpack.config.js --watch",
     "build-prod": "webpack --config webpack.prod.js",
     "start-prod": "webpack serve --open --config webpack.prod.js",
-    "build:staging": "env-cmd -f .env.staging npm run build-prod",
     "start": "webpack serve",
     "lint": "eslint */**/*.{ts,tsx} --quiet --fix",
     "format": "prettier --config .prettierrc  */**/*.{ts,tsx} --write"
