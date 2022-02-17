@@ -18,11 +18,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
-webpack.common.js
 webpack.config.js
-webpack.prod.js
-webpack.dev.js
-index.d.ts
+
 
 npm-debug.log*
 yarn-debug.log*
