@@ -6,7 +6,7 @@ import { store } from './app/store';
 import App from './app';
 
 render(
-  <BrowserRouter basename='https://get-me-ip.vercel.app'>
+  <BrowserRouter>
     <Provider store={store}>
       <App />
     </Provider>
