@@ -18,6 +18,7 @@ export const getIP = createAsyncThunk('ip/getIP', async (_, { rejectWithValue })
     const { ip } = await res.json();
     return await getData(ip);
   } catch (err) {
+    // @ts-ignore
     return rejectWithValue(err.message);
   }
 });
@@ -26,6 +27,7 @@ export const getIpAndData = createAsyncThunk('ip/getIP', async (ip: string, { re
   try {
     return await getData(ip);
   } catch (err) {
+    // @ts-ignore
     return rejectWithValue(err.message);
   }
 });
