@@ -63,5 +63,5 @@
     "react-router-dom": "^6.2.1",
     "typescript": "^4.5.5"
   },
-  "homepage":"https,://get-me-ip.vercel.app"
+  "homepage":"https,://get-me-ip.vercel.app/"
 }

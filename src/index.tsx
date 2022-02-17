@@ -6,7 +6,7 @@ import { store } from './app/store';
 import App from './app';
 
 render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename={process.env.REACT_APP_API_PUBLIC}>
     <Provider store={store}>
       <App />
     </Provider>
