@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './navigation.scss';
 
 export const Navigation = () => {
   return (
     <div className="nav">
-      <Link to="/" className="nav__link">
+      <NavLink to="/" className="nav__link">
         Узнать данные по IP
-      </Link>
+      </NavLink>
 
       <Link to="/myIP" className="nav__link">
         Свой IP
