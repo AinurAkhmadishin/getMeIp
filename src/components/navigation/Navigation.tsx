@@ -9,9 +9,9 @@ export const Navigation = () => {
         Узнать данные по IP
       </NavLink>
 
-      <Link to="/myIP" className="nav__link">
+      <NavLink to="/myIP" className="nav__link">
         Свой IP
-      </Link>
+      </NavLink>
     </div>
   );
 };
