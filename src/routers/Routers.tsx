@@ -1,12 +1,12 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { MyIp } from '../pages/myIP/MyIP';
 import { Navigation } from '../components/navigation/Navigation';
 import { AlienIp } from '../pages/alienIp/AlienIP';
 
 export const Routers = () => {
   return (
-    <>
+    <HashRouter>
       <Navigation />
       <Routes>
         <Route path="/myIp" element={<MyIp />} />
@@ -20,6 +20,6 @@ export const Routers = () => {
           }
         />
       </Routes>
-    </>
+    </HashRouter>
   );
 };

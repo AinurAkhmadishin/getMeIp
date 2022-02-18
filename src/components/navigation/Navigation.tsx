@@ -1,10 +1,10 @@
 import React from 'react';
-import { HashRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './navigation.scss';
 
 export const Navigation = () => {
   return (
-    <HashRouter>
+    <div className="nav">
       <Link to="/" className="nav__link">
         Узнать данные по IP
       </Link>
@@ -12,6 +12,6 @@ export const Navigation = () => {
       <Link to="/myIP" className="nav__link">
         Свой IP
       </Link>
-    </HashRouter>
+    </div>
   );
 };
