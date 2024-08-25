@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install -g npm@10.8.2
 
 # Install dependencies with --legacy-peer-deps
-RUN npm i --legacy-peer-deps
+RUN npm i --force
 
 # Copy the rest of your application code
 COPY . .
