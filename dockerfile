@@ -1,5 +1,5 @@
 # Use an appropriate base image
-FROM node:20
+FROM node:18
 
 # Set the working directory
 WORKDIR /opt/build
@@ -10,8 +10,8 @@ COPY package*.json ./
 # Update npm to the latest version
 RUN npm install -g npm@10.8.2
 
-# Install dependencies
-RUN npm i
+# Install dependencies with --legacy-peer-deps
+RUN npm i --legacy-peer-deps
 
 # Copy the rest of your application code
 COPY . .
