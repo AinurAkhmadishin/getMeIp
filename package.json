@@ -63,5 +63,6 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "typescript": "^4.5.5"
+    "react-maskedinput": "4.0.1"
   }
 }
